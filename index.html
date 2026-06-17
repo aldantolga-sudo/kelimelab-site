@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KelimeLab — Harflerden Kelime Bulucu</title>
+  <meta name="description" content="Elindeki harflerle oluşturulabilecek Türkçe kelimeleri bul.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">KelimeLab</a>
+      <span class="badge">İlk prototip</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">TÜRKÇE KELİME ARACI</p>
+      <h1>Harflerden kelime bul</h1>
+      <p class="intro">
+        Elindeki harfleri yaz. KelimeLab, bu harflerle oluşturulabilecek örnek Türkçe kelimeleri sıralasın.
+      </p>
+    </section>
+
+    <section class="tool-card" aria-labelledby="tool-title">
+      <h2 id="tool-title">Harflerini gir</h2>
+
+      <label for="letters">Harfler</label>
+      <input
+        id="letters"
+        name="letters"
+        type="text"
+        inputmode="text"
+        autocomplete="off"
+        maxlength="20"
+        placeholder="Örnek: KELİME"
+        aria-describedby="input-help"
+      >
+      <p id="input-help" class="help">Boşluk veya virgül kullanmadan da yazabilirsin.</p>
+
+      <div class="actions">
+        <button id="findButton" type="button">Kelime Bul</button>
+        <button id="clearButton" class="secondary" type="button">Temizle</button>
+      </div>
+
+      <div id="status" class="status" aria-live="polite"></div>
+      <ul id="results" class="results" aria-label="Bulunan kelimeler"></ul>
+    </section>
+
+    <section class="info-card">
+      <h2>Bu sürüm ne yapıyor?</h2>
+      <p>
+        Bu ilk teknik prototiptir. Şimdilik küçük bir örnek kelime listesi kullanır.
+        Sonraki aşamada gerçek ve çok daha geniş Türkçe kelime verisi eklenecektir.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> KelimeLab</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
