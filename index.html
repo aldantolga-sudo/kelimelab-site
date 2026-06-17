@@ -14,7 +14,13 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">KelimeLab</a>
-      <span class="badge">v0.4 anagram</span>
+      <nav class="site-nav" aria-label="Ana menü">
+        <a href="index.html" aria-current="page">Araçlar</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="gizlilik-politikasi.html">Gizlilik</a>
+        <a href="kullanim-kosullari.html">Koşullar</a>
+        <a href="iletisim.html">İletişim</a>
+      </nav>
     </div>
   </header>
 
@@ -30,26 +36,10 @@
 
     <section class="tool-card" aria-labelledby="tool-title">
       <div class="mode-switch" role="tablist" aria-label="Araç seçimi">
-        <button
-          id="wordModeButton"
-          class="mode-button active"
-          type="button"
-          data-mode="word"
-          role="tab"
-          aria-selected="true"
-        >
-          Kelime Bulucu
-        </button>
-        <button
-          id="anagramModeButton"
-          class="mode-button"
-          type="button"
-          data-mode="anagram"
-          role="tab"
-          aria-selected="false"
-        >
-          Anagram Çözücü
-        </button>
+        <button id="wordModeButton" class="mode-button active" type="button"
+          data-mode="word" role="tab" aria-selected="true">Kelime Bulucu</button>
+        <button id="anagramModeButton" class="mode-button" type="button"
+          data-mode="anagram" role="tab" aria-selected="false">Anagram Çözücü</button>
       </div>
 
       <div class="tool-heading">
@@ -63,16 +53,9 @@
       </div>
 
       <label for="letters">Harfler</label>
-      <input
-        id="letters"
-        name="letters"
-        type="text"
-        inputmode="text"
-        autocomplete="off"
-        maxlength="20"
-        placeholder="Örnek: KALEM"
-        aria-describedby="input-help"
-      >
+      <input id="letters" name="letters" type="text" inputmode="text"
+        autocomplete="off" maxlength="20" placeholder="Örnek: KALEM"
+        aria-describedby="input-help">
 
       <p id="input-help" class="help">
         En az 3 harfli sonuçlar gösterilir. Her harf yalnızca girdiğin sayı kadar kullanılabilir.
@@ -97,22 +80,22 @@
 
     <section class="info-card">
       <h2>İki farklı araç</h2>
-      <p>
-        <strong>Kelime Bulucu</strong>, verdiğin harflerin bir kısmını veya tamamını
-        kullanabilen kelimeleri listeler.
-      </p>
-      <p>
-        <strong>Anagram Çözücü</strong>, yalnızca bütün harfleri tam olarak kullanan
-        kelimeleri gösterir.
-      </p>
-      <p class="small-note">
-        Örnek: KALEM yazıldığında anagram modunda KALEM ve KELAM gibi tam eşleşmeler gösterilir.
-      </p>
+      <p><strong>Kelime Bulucu</strong>, verdiğin harflerin bir kısmını veya tamamını kullanabilen kelimeleri listeler.</p>
+      <p><strong>Anagram Çözücü</strong>, yalnızca bütün harfleri tam olarak kullanan kelimeleri gösterir.</p>
+      <p class="small-note">Örnek: KALEM yazıldığında anagram modunda KALEM ve KELAM gibi tam eşleşmeler gösterilir.</p>
     </section>
   </main>
 
-  <footer>
-    <div class="container">© <span id="year"></span> KelimeLab</div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> KelimeLab</span>
+      <nav class="footer-links" aria-label="Alt menü">
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="gizlilik-politikasi.html">Gizlilik</a>
+        <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+        <a href="iletisim.html">İletişim</a>
+      </nav>
+    </div>
   </footer>
 
   <script src="kelimeler.js"></script>

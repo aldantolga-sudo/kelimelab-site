@@ -1,19 +1,26 @@
-KELİMELAB v0.4
+KELİMELAB v0.5
 
-YENİ ÖZELLİK
-- Anagram Çözücü eklendi.
-- Anagram modu yalnızca girilen bütün harfleri eksiksiz kullanan kelimeleri gösterir.
-- Kelime Bulucu modu aynen korunmuştur.
+YENİ SAYFALAR
+- hakkimizda.html
+- gizlilik-politikasi.html
+- kullanim-kosullari.html
+- iletisim.html
 
-Kelime sayısı: 8778
+DİĞER DEĞİŞİKLİKLER
+- Üst menü eklendi.
+- Tüm sayfalara alt menü eklendi.
+- Mobil menü görünümü düzenlendi.
+- Mevcut Kelime Bulucu ve Anagram Çözücü korundu.
+
+ÖNEMLİ
+İletişim sayfasında gerçek e-posta adresi henüz yayımlanmamıştır.
+Spam riskini azaltmak için proje adına ayrı bir e-posta oluşturulması önerilir.
 
 TEST
 1. ZIP'i ayıklayın.
 2. index.html dosyasını açın.
-3. Kelime Bulucu modunda KUMANDA yazın.
-4. Anagram Çözücü moduna geçin.
-5. KALEM yazın.
-6. KALEM ve KELAM gibi tam eşleşmeleri kontrol edin.
-7. KELİME yazıp anagram sonuçlarını kontrol edin.
+3. Üst menüdeki bütün sayfalara tek tek girin.
+4. Ana sayfaya dönüp Kelime Bulucu ve Anagram Çözücü'yü test edin.
+5. Telefonda menünün taşmadığını kontrol edin.
 
-Henüz GitHub'a yüklemeyin. Önce bilgisayarda test edin.
+Henüz GitHub'a yüklemeden önce bilgisayarda test edin.
