@@ -1,26 +1,23 @@
-KELİMELAB v0.5
+KELİMELAB v0.6 — GOOGLE TARAMA VE TEMEL SEO
 
-YENİ SAYFALAR
-- hakkimizda.html
-- gizlilik-politikasi.html
-- kullanim-kosullari.html
-- iletisim.html
+EKLENEN DOSYALAR
+- sitemap.xml
+- robots.txt
 
-DİĞER DEĞİŞİKLİKLER
-- Üst menü eklendi.
-- Tüm sayfalara alt menü eklendi.
-- Mobil menü görünümü düzenlendi.
-- Mevcut Kelime Bulucu ve Anagram Çözücü korundu.
+SEO GÜNCELLEMELERİ
+- Her sayfaya benzersiz başlık eklendi.
+- Her sayfaya benzersiz meta açıklaması eklendi.
+- Canonical adresleri eklendi.
+- Temel Open Graph paylaşım etiketleri eklendi.
 
-ÖNEMLİ
-İletişim sayfasında gerçek e-posta adresi henüz yayımlanmamıştır.
-Spam riskini azaltmak için proje adına ayrı bir e-posta oluşturulması önerilir.
+BİLGİSAYARDA TEST
+1. index.html dosyasını açın.
+2. Kelime Bulucu ve Anagram Çözücü'yü kontrol edin.
+3. Menüdeki dört bilgi sayfasını açın.
+4. sitemap.xml ve robots.txt tarayıcıda yerel olarak düz metin/XML görünebilir; bu normaldir.
 
-TEST
-1. ZIP'i ayıklayın.
-2. index.html dosyasını açın.
-3. Üst menüdeki bütün sayfalara tek tek girin.
-4. Ana sayfaya dönüp Kelime Bulucu ve Anagram Çözücü'yü test edin.
-5. Telefonda menünün taşmadığını kontrol edin.
+CANLIYA YÜKLEDİKTEN SONRA KONTROL
+- https://kelimelab-site.pages.dev/sitemap.xml
+- https://kelimelab-site.pages.dev/robots.txt
 
-Henüz GitHub'a yüklemeden önce bilgisayarda test edin.
+Sonraki adım Google Search Console'a siteyi eklemek ve sitemap.xml göndermektir.
