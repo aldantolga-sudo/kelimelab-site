@@ -3,45 +3,78 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KelimeLab — Harflerden Kelime Bulucu</title>
-  <meta name="description" content="Elindeki harflerle oluşturulabilecek Türkçe kelimeleri bul.">
+  <title>KelimeLab — Kelime Bulucu ve Anagram Çözücü</title>
+  <meta
+    name="description"
+    content="Elindeki harflerle oluşturulabilecek Türkçe kelimeleri bul veya tüm harfleri kullanan anagramları çöz."
+  >
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">KelimeLab</a>
-      <span class="badge">v0.3.1 temiz sözlük</span>
+      <span class="badge">v0.4 anagram</span>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <p class="eyebrow">TÜRKÇE KELİME ARACI</p>
-      <h1>Harflerden kelime bul</h1>
+      <p class="eyebrow">TÜRKÇE KELİME ARAÇLARI</p>
+      <h1>Kelime bul veya anagram çöz</h1>
       <p class="intro">
-        Elindeki harfleri yaz. KelimeLab, bu harflerle oluşturulabilecek
-        kelimeleri uzunluklarına göre sıralasın.
+        Harflerinden oluşturulabilecek kelimeleri bul veya bütün harfleri
+        eksiksiz kullanan anagramları listele.
       </p>
     </section>
 
-    <section class="tool-card">
-      <h2>Harflerini gir</h2>
-      <p class="dictionary-info">
-        Temizlenmiş prototip sözlük:
-        <strong id="dictionaryCount">yükleniyor…</strong>
-      </p>
+    <section class="tool-card" aria-labelledby="tool-title">
+      <div class="mode-switch" role="tablist" aria-label="Araç seçimi">
+        <button
+          id="wordModeButton"
+          class="mode-button active"
+          type="button"
+          data-mode="word"
+          role="tab"
+          aria-selected="true"
+        >
+          Kelime Bulucu
+        </button>
+        <button
+          id="anagramModeButton"
+          class="mode-button"
+          type="button"
+          data-mode="anagram"
+          role="tab"
+          aria-selected="false"
+        >
+          Anagram Çözücü
+        </button>
+      </div>
+
+      <div class="tool-heading">
+        <div>
+          <h2 id="tool-title">Harflerini gir</h2>
+          <p class="dictionary-info">
+            Temizlenmiş prototip sözlük:
+            <strong id="dictionaryCount">yükleniyor…</strong>
+          </p>
+        </div>
+      </div>
 
       <label for="letters">Harfler</label>
       <input
         id="letters"
+        name="letters"
         type="text"
+        inputmode="text"
         autocomplete="off"
         maxlength="20"
-        placeholder="Örnek: KELİME"
+        placeholder="Örnek: KALEM"
+        aria-describedby="input-help"
       >
 
-      <p class="help">
+      <p id="input-help" class="help">
         En az 3 harfli sonuçlar gösterilir. Her harf yalnızca girdiğin sayı kadar kullanılabilir.
       </p>
 
@@ -52,26 +85,28 @@
 
       <div id="status" class="status" aria-live="polite"></div>
 
-      <div id="filters" class="filters">
+      <div id="filters" class="filters" aria-label="Kelime uzunluğu filtreleri">
         <button class="filter-button active" type="button" data-filter="all">Tümü</button>
         <button class="filter-button" type="button" data-filter="3">3 harf</button>
         <button class="filter-button" type="button" data-filter="4">4 harf</button>
         <button class="filter-button" type="button" data-filter="5plus">5+ harf</button>
       </div>
 
-      <ul id="results" class="results"></ul>
+      <ul id="results" class="results" aria-label="Bulunan kelimeler"></ul>
     </section>
 
     <section class="info-card">
-      <h2>v0.3 sözlük temizliği</h2>
+      <h2>İki farklı araç</h2>
       <p>
-        Sonuçlar artık yaygınlık verisi ile Türkçe ana sözlük kesişiminden
-        oluşturuluyor. Özel ad, kısaltma ve rastgele harf birleşimi görünme
-        ihtimali azaltıldı.
+        <strong>Kelime Bulucu</strong>, verdiğin harflerin bir kısmını veya tamamını
+        kullanabilen kelimeleri listeler.
+      </p>
+      <p>
+        <strong>Anagram Çözücü</strong>, yalnızca bütün harfleri tam olarak kullanan
+        kelimeleri gösterir.
       </p>
       <p class="small-note">
-        Bu hâlâ geliştirme sözlüğüdür. Nihai sürümde kelimeler ayrıca
-        oyun ve kullanım kurallarına göre gözden geçirilecektir.
+        Örnek: KALEM yazıldığında anagram modunda KALEM ve KELAM gibi tam eşleşmeler gösterilir.
       </p>
     </section>
   </main>
