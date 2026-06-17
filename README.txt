@@ -1,21 +1,15 @@
-KELİMELAB v0.2 — TEST TALİMATI
+KELİMELAB v0.3.1
 
-DOSYALAR
-- index.html     : Ana sayfa
-- style.css      : Tasarım
-- script.js      : Kelime bulma ve filtre sistemi
-- kelimeler.js   : 10.000 kelimelik prototip veri dosyası
-- NOTICE.txt     : Veri kaynağı bilgisi
+Bu sürümde 2 harfli sonuçlar tamamen kaldırıldı.
+Site artık yalnızca 3 harf ve üzerindeki kelimeleri gösterir.
 
-ÖNEMLİ
-Bu ZIP dosyasını GitHub'a doğrudan yüklemeyin.
-Önce ZIP'i ayıklayın.
+Kelime sayısı: 8778
 
-BİLGİSAYARDA TEST
-1. index.html dosyasına çift tıklayın.
-2. Üstte "10.000 kelime" yazdığını kontrol edin.
-3. Harf kutusuna KELİME yazın.
-4. Kelime Bul düğmesine basın.
-5. Tümü, 3 harf, 4 harf ve 5+ harf filtrelerini deneyin.
+TEST
+1. ZIP'i ayıklayın.
+2. index.html dosyasını açın.
+3. KUMANDA ve KELİME yazın.
+4. Tümü, 3 harf, 4 harf ve 5+ harf filtrelerini deneyin.
+5. 2 harf filtresinin görünmediğini kontrol edin.
 
-Bu sürüm teknik prototiptir. Kelime veri seti son ürün sözlüğü değildir.
+Henüz GitHub'a yüklemeyin. Önce bilgisayarda test edin.

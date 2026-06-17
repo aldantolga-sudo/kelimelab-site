@@ -1,11 +1,10 @@
-KELİME VERİSİ HAKKINDA
+VERİ KAYNAĞI NOTU
 
-Bu prototipteki yaygın Türkçe kelime listesi, wordfreq 3.1.1
-paketi kullanılarak oluşturulmuştur.
+Bu teknik prototipte kelime adayları:
+- wordfreq Türkçe yaygınlık verisi
+- TRNLP ana sözlüğü
 
-wordfreq lisansı: Apache License 2.0
-Proje: https://github.com/rspeer/wordfreq
+kesiştirilerek oluşturulmuştur.
 
-Bu liste resmî bir Türkçe sözlük değildir. Teknik prototip, arama sistemi ve
-performans testi amacıyla kullanılmaktadır. Nihai kelime kabul kuralları daha
-sonra ayrıca doğrulanacaktır.
+Bu liste resmî TDK sözlüğü değildir.
+Nihai sürümde ayrıca manuel ve kurala dayalı temizlik yapılacaktır.
