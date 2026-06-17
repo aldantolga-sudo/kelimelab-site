@@ -1,0 +1,11 @@
+KELİME VERİSİ HAKKINDA
+
+Bu prototipteki yaygın Türkçe kelime listesi, wordfreq 3.1.1
+paketi kullanılarak oluşturulmuştur.
+
+wordfreq lisansı: Apache License 2.0
+Proje: https://github.com/rspeer/wordfreq
+
+Bu liste resmî bir Türkçe sözlük değildir. Teknik prototip, arama sistemi ve
+performans testi amacıyla kullanılmaktadır. Nihai kelime kabul kuralları daha
+sonra ayrıca doğrulanacaktır.
