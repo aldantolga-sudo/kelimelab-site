@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jokerli Türkçe Kelime Bulucu | KelimeLab</title>
+  <meta name="description" content="Soru işareti veya yıldız karakterini serbest harf olarak kullanarak jokerli Türkçe kelimeler bul.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://kelimelab-site.pages.dev/jokerli-kelime-bulucu.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="KelimeLab">
+  <meta property="og:title" content="Jokerli Türkçe Kelime Bulucu | KelimeLab">
+  <meta property="og:description" content="Soru işareti veya yıldız karakterini serbest harf olarak kullanarak jokerli Türkçe kelimeler bul.">
+  <meta property="og:url" content="https://kelimelab-site.pages.dev/jokerli-kelime-bulucu.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Jokerli Kelime Bulucu","url":"https://kelimelab-site.pages.dev/jokerli-kelime-bulucu.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","inLanguage":"tr","isAccessibleForFree":true,"description":"Soru işareti veya yıldız karakterini serbest harf olarak kullanarak jokerli Türkçe kelimeler bul."}</script>
+</head>
+<body data-tool="joker">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="KelimeLab ana sayfa">
+        <span class="brand-mark">K</span>
+        <span>KelimeLab</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+        Menü
+      </button>
+      <nav id="main-nav" class="site-nav" aria-label="Ana menü">
+        <a href="index.html">Ana Sayfa</a>
+          <a href="kelime-bulucu.html">Kelime Bulucu</a>
+          <a href="anagram-cozucu.html">Anagram</a>
+          <a href="index.html#tum-araclar">Tüm Araçlar</a>
+          <a href="sik-sorulan-sorular.html">SSS</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero tool-hero">
+      <div class="container narrow">
+        <p class="eyebrow">SERBEST HARF DESTEĞİ</p>
+        <h1>Jokerli Kelime Bulucu</h1>
+        <p class="hero-copy">Eksik harflerin yerine ? veya * jokeri koy; eldeki harflerle kurulabilen kelimeleri listele.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="tool-panel" aria-labelledby="tool-panel-title">
+        <div class="tool-panel-heading">
+          <div>
+            <p class="panel-kicker">Ücretsiz Türkçe araç</p>
+            <h2 id="tool-panel-title">Jokerli Kelime Bulucu</h2>
+          </div>
+          <span class="dictionary-badge"><strong data-word-count>8,778</strong> kelime</span>
+        </div>
+
+        <form id="toolForm" novalidate>
+          <label class="main-label" for="primaryInput">Harfler ve joker</label>
+          <input
+            id="primaryInput"
+            class="main-input"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            maxlength="30"
+            placeholder="Örnek: KAL?M"
+            aria-describedby="inputHelp"
+          >
+          <p id="inputHelp" class="input-help">Her ? veya * bir serbest harfin yerine geçer. Harflerin sırası önemli değildir.</p>
+
+          
+          <fieldset class="length-fieldset">
+          <legend>Kelime uzunluğu</legend>
+          <label>
+            En az
+            <input id="minLength" type="number" inputmode="numeric" min="3" max="15" value="3">
+          </label>
+          <label>
+            En fazla
+            <input id="maxLength" type="number" inputmode="numeric" min="3" max="15" value="15">
+          </label>
+        </fieldset>
+
+          <div class="form-actions">
+            <button class="primary-button" type="submit">Jokerli Kelimeleri Bul</button>
+            <button id="clearButton" class="secondary-button" type="button">Temizle</button>
+          </div>
+        </form>
+
+        <div id="status" class="result-status" aria-live="polite"></div>
+        <div id="resultMeta" class="result-meta" hidden></div>
+        <ul id="results" class="result-grid" aria-label="Bulunan kelimeler"></ul>
+      </section>
+
+      
+<section class="prose-card">
+  <h2>Jokerli Kelime Bulucu nasıl çalışır?</h2>
+  <p>
+    Joker, eksik olan herhangi bir harfin yerine geçebilen serbest karakterdir. Giriş alanında
+    soru işareti (?) veya yıldız (*) kullandığınızda araç, sözlükteki kelimeleri bu serbest harf
+    hakkını hesaba katarak tarar. Harflerin sırası önemli değildir.
+  </p>
+  <h2>Kullanım örneği</h2>
+  <table class="example-table">
+    <thead><tr><th>Girdi</th><th>Anlamı</th></tr></thead>
+    <tbody>
+      <tr><td>KAL?M</td><td>K, A, L, M harflerine ek olarak bir serbest harf kullanılabilir.</td></tr>
+      <tr><td>AN?E</td><td>Bir joker, eksik olan N veya başka uygun bir harfin yerine geçebilir.</td></tr>
+    </tbody>
+  </table>
+  <h2>Joker ile kalıp arasındaki fark</h2>
+  <p>
+    Jokerli araçta harfler karıştırılabilir; jokerin belirli bir konumu yoktur.
+    <a href="kelime-kalibi-cozucu.html">Kelime Kalıbı Çözücü</a> ise harflerin yerini sabit tutar.
+    Örneğin K_L_M kalıbında K birinci, L üçüncü ve M beşinci konumda olmak zorundadır.
+  </p>
+</section>
+<section class="section-block">
+  <div class="section-heading"><p class="eyebrow">KISA CEVAPLAR</p><h2>Joker kullanımı hakkında</h2></div>
+  <div class="faq-list">
+    <details class="faq-item">
+          <summary>KelimeLab hangi Türkçe karakterleri destekliyor?</summary>
+          <p>Araçlar Ç, Ğ, I, İ, Ö, Ş ve Ü dâhil Türkçe alfabedeki harfleri destekler. Büyük veya küçük harf kullanmanız sonucu değiştirmez.</p>
+        </details>
+<details class="faq-item">
+          <summary>Joker karakter nasıl kullanılır?</summary>
+          <p>Jokerli Kelime Bulucu sayfasında soru işareti (?) veya yıldız (*) yazabilirsiniz. Her joker, eksik olan herhangi bir harfin yerine geçer.</p>
+        </details>
+<details class="faq-item">
+          <summary>Sonuçlar bütün kelime oyunlarında kabul edilir mi?</summary>
+          <p>Hayır. KelimeLab geliştirme aşamasındaki bir Türkçe kelime listesi kullanır. Her oyunun, yarışmanın veya bulmacanın kabul ettiği sözlük ve çekim kuralları farklı olabilir.</p>
+        </details>
+  </div>
+</section>
+
+      <section class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">BENZER ARAÇLAR</p>
+        <h2>Aramaya başka bir yöntemle devam et</h2>
+      </div>
+      <div class="related-grid"><a class="related-card" href="kelime-bulucu.html">
+          <span class="mini-icon">KB</span>
+          <span>
+            <strong>Harflerden Kelime Bulucu</strong>
+            <small>Elindeki harflerle oluşturulabilecek Türkçe kelimeleri uzunluğa göre filtrele.</small>
+          </span>
+        </a>
+<a class="related-card" href="anagram-cozucu.html">
+          <span class="mini-icon">AN</span>
+          <span>
+            <strong>Anagram Çözücü</strong>
+            <small>Bütün harfleri tam olarak kullanan farklı kelime dizilişlerini bul.</small>
+          </span>
+        </a>
+<a class="related-card" href="kelime-kalibi-cozucu.html">
+          <span class="mini-icon">K_</span>
+          <span>
+            <strong>Kelime Kalıbı Çözücü</strong>
+            <small>Bilinen harfleri yerlerine yaz, boş konumlara uyan kelimeleri listele.</small>
+          </span>
+        </a></div>
+    </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-brand" href="index.html">KelimeLab</a>
+        <p>Türkçe kelime bulma, anagram ve harf filtreleme araçları.</p>
+      </div>
+      <div>
+        <h2>Araçlar</h2>
+        <a href="kelime-bulucu.html">Kelime Bulucu</a>
+        <a href="anagram-cozucu.html">Anagram Çözücü</a>
+        <a href="jokerli-kelime-bulucu.html">Jokerli Bulucu</a>
+        <a href="kelime-kalibi-cozucu.html">Kalıp Çözücü</a>
+      </div>
+      <div>
+        <h2>İçerikler</h2>
+        <a href="kelime-bulucu-nasil-kullanilir.html">Kelime Bulucu Rehberi</a>
+        <a href="anagram-nedir-nasil-cozulur.html">Anagram Rehberi</a>
+        <a href="sik-sorulan-sorular.html">Sık Sorulan Sorular</a>
+      </div>
+      <div>
+        <h2>Kurumsal</h2>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+        <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+        <a href="iletisim.html">İletişim</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-current-year></span> KelimeLab</span>
+      <span>Geliştirme sözlüğü: <strong data-word-count>8.778</strong> kelime</span>
+    </div>
+  </footer>
+  <script src="kelimeler.js"></script>
+  <script src="site.js"></script>
+  <script src="tools.js"></script>
+</body>
+</html>

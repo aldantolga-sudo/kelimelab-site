@@ -1,86 +1,234 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="tr">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Türkçe Kelime Bulucu ve Anagram Çözücü | KelimeLab</title>
-<meta content="Harflerden Türkçe kelimeler bul, sonuçları uzunluğa göre filtrele ve bütün harfleri kullanan anagramları çöz." name="description"/>
-<link href="style.css" rel="stylesheet"/>
-<link href="https://kelimelab-site.pages.dev/" rel="canonical"/><meta content="website" property="og:type"/><meta content="Türkçe Kelime Bulucu ve Anagram Çözücü | KelimeLab" property="og:title"/><meta content="Harflerden Türkçe kelimeler bul, sonuçları uzunluğa göre filtrele ve bütün harfleri kullanan anagramları çöz." property="og:description"/><meta content="https://kelimelab-site.pages.dev/" property="og:url"/><meta content="summary" name="twitter:card"/></head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Türkçe Kelime Bulucu, Anagram ve Harf Araçları | KelimeLab</title>
+  <meta name="description" content="Türkçe kelimeler bul, anagram çöz, joker kullan, kelime kalıbı ara ve başlangıç, bitiş veya içerdiği harflere göre sonuçları filtrele.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://kelimelab-site.pages.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="KelimeLab">
+  <meta property="og:title" content="Türkçe Kelime Bulucu, Anagram ve Harf Araçları | KelimeLab">
+  <meta property="og:description" content="Türkçe kelimeler bul, anagram çöz, joker kullan, kelime kalıbı ara ve başlangıç, bitiş veya içerdiği harflere göre sonuçları filtrele.">
+  <meta property="og:url" content="https://kelimelab-site.pages.dev/">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"KelimeLab","url":"https://kelimelab-site.pages.dev/","inLanguage":"tr","description":"Türkçe kelime bulucu, anagram çözücü ve harf filtreleme araçları."}</script>
+</head>
 <body>
-<header class="site-header">
-<div class="container header-inner">
-<a class="brand" href="index.html">KelimeLab</a>
-<nav aria-label="Ana menü" class="site-nav">
-<a aria-current="page" href="index.html">Araçlar</a>
-<a href="hakkimizda.html">Hakkımızda</a>
-<a href="gizlilik-politikasi.html">Gizlilik</a>
-<a href="kullanim-kosullari.html">Koşullar</a>
-<a href="iletisim.html">İletişim</a>
-</nav>
-</div>
-</header>
-<main class="container">
-<section class="hero">
-<p class="eyebrow">TÜRKÇE KELİME ARAÇLARI</p>
-<h1>Kelime bul veya anagram çöz</h1>
-<p class="intro">
-        Harflerinden oluşturulabilecek kelimeleri bul veya bütün harfleri
-        eksiksiz kullanan anagramları listele.
-      </p>
-</section>
-<section aria-labelledby="tool-title" class="tool-card">
-<div aria-label="Araç seçimi" class="mode-switch" role="tablist">
-<button aria-selected="true" class="mode-button active" data-mode="word" id="wordModeButton" role="tab" type="button">Kelime Bulucu</button>
-<button aria-selected="false" class="mode-button" data-mode="anagram" id="anagramModeButton" role="tab" type="button">Anagram Çözücü</button>
-</div>
-<div class="tool-heading">
-<div>
-<h2 id="tool-title">Harflerini gir</h2>
-<p class="dictionary-info">
-            Temizlenmiş prototip sözlük:
-            <strong id="dictionaryCount">yükleniyor…</strong>
-</p>
-</div>
-</div>
-<label for="letters">Harfler</label>
-<input aria-describedby="input-help" autocomplete="off" id="letters" inputmode="text" maxlength="20" name="letters" placeholder="Örnek: KALEM" type="text"/>
-<p class="help" id="input-help">
-        En az 3 harfli sonuçlar gösterilir. Her harf yalnızca girdiğin sayı kadar kullanılabilir.
-      </p>
-<div class="actions">
-<button id="findButton" type="button">Kelime Bul</button>
-<button class="secondary" id="clearButton" type="button">Temizle</button>
-</div>
-<div aria-live="polite" class="status" id="status"></div>
-<div aria-label="Kelime uzunluğu filtreleri" class="filters" id="filters">
-<button class="filter-button active" data-filter="all" type="button">Tümü</button>
-<button class="filter-button" data-filter="3" type="button">3 harf</button>
-<button class="filter-button" data-filter="4" type="button">4 harf</button>
-<button class="filter-button" data-filter="5plus" type="button">5+ harf</button>
-</div>
-<ul aria-label="Bulunan kelimeler" class="results" id="results"></ul>
-</section>
-<section class="info-card">
-<h2>İki farklı araç</h2>
-<p><strong>Kelime Bulucu</strong>, verdiğin harflerin bir kısmını veya tamamını kullanabilen kelimeleri listeler.</p>
-<p><strong>Anagram Çözücü</strong>, yalnızca bütün harfleri tam olarak kullanan kelimeleri gösterir.</p>
-<p class="small-note">Örnek: KALEM yazıldığında anagram modunda KALEM ve KELAM gibi tam eşleşmeler gösterilir.</p>
-</section>
-</main>
-<footer class="site-footer">
-<div class="container footer-inner">
-<span>© <span id="year"></span> KelimeLab</span>
-<nav aria-label="Alt menü" class="footer-links">
-<a href="hakkimizda.html">Hakkımızda</a>
-<a href="gizlilik-politikasi.html">Gizlilik</a>
-<a href="kullanim-kosullari.html">Kullanım Koşulları</a>
-<a href="iletisim.html">İletişim</a>
-</nav>
-</div>
-</footer>
-<script src="kelimeler.js"></script>
-<script src="script.js"></script>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="KelimeLab ana sayfa">
+        <span class="brand-mark">K</span>
+        <span>KelimeLab</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+        Menü
+      </button>
+      <nav id="main-nav" class="site-nav" aria-label="Ana menü">
+        <a href="index.html" aria-current="page">Ana Sayfa</a>
+          <a href="kelime-bulucu.html">Kelime Bulucu</a>
+          <a href="anagram-cozucu.html">Anagram</a>
+          <a href="index.html#tum-araclar">Tüm Araçlar</a>
+          <a href="sik-sorulan-sorular.html">SSS</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container narrow">
+        <p class="eyebrow">TÜRKÇE KELİME ARAÇLARI</p>
+        <h1>Harflerini kelimeye dönüştür</h1>
+        <p class="hero-copy">
+          Kelime oyunları, bulmacalar ve anagramlar için hızlı çalışan Türkçe araçlar.
+          Harflerini gir, arama biçimini seç ve sonuçları saniyeler içinde filtrele.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-link" href="kelime-bulucu.html">Kelime bulmaya başla</a>
+          <a class="secondary-link" href="#tum-araclar">Bütün araçları gör</a>
+        </div>
+        <div class="trust-strip" aria-label="KelimeLab özellikleri">
+          <div class="trust-item"><strong>8,778</strong><span>temizlenmiş prototip kelime</span></div>
+          <div class="trust-item"><strong>7 araç</strong><span>farklı arama yöntemi</span></div>
+          <div class="trust-item"><strong>Mobil uyumlu</strong><span>telefonda hızlı kullanım</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section id="tum-araclar" class="section-block">
+        <div class="section-heading">
+          <p class="eyebrow">BÜTÜN ARAÇLAR</p>
+          <h2>Aradığın kelimeye uygun yöntemi seç</h2>
+          <p>
+            Her araç farklı bir problemi çözer. Elindeki harflerle kelime üretmek,
+            sabit konumları tamamlamak veya belirli harf özelliklerine göre aramak için
+            uygun sayfayı aç.
+          </p>
+        </div>
+        <div class="tool-grid">
+          <a class="tool-card" href="kelime-bulucu.html">
+          <span class="tool-icon">KB</span>
+          <h3>Harflerden Kelime Bulucu</h3>
+          <p>Elindeki harflerle oluşturulabilecek Türkçe kelimeleri uzunluğa göre filtrele.</p>
+          <span class="tool-tag">Temel araç →</span>
+        </a>
+<a class="tool-card" href="anagram-cozucu.html">
+          <span class="tool-icon">AN</span>
+          <h3>Anagram Çözücü</h3>
+          <p>Bütün harfleri tam olarak kullanan farklı kelime dizilişlerini bul.</p>
+          <span class="tool-tag">Tam eşleşme →</span>
+        </a>
+<a class="tool-card" href="jokerli-kelime-bulucu.html">
+          <span class="tool-icon">J?</span>
+          <h3>Jokerli Kelime Bulucu</h3>
+          <p>Soru işaretini serbest harf olarak kullan ve eksik harfleri tamamla.</p>
+          <span class="tool-tag">Joker desteği →</span>
+        </a>
+<a class="tool-card" href="kelime-kalibi-cozucu.html">
+          <span class="tool-icon">K_</span>
+          <h3>Kelime Kalıbı Çözücü</h3>
+          <p>Bilinen harfleri yerlerine yaz, boş konumlara uyan kelimeleri listele.</p>
+          <span class="tool-tag">Sabit konum →</span>
+        </a>
+<a class="tool-card" href="harfle-baslayan-kelimeler.html">
+          <span class="tool-icon">A→</span>
+          <h3>Harfle Başlayan Kelimeler</h3>
+          <p>Bir harf veya heceyle başlayan kelimeleri uzunluk aralığıyla ara.</p>
+          <span class="tool-tag">Başlangıç filtresi →</span>
+        </a>
+<a class="tool-card" href="harfle-biten-kelimeler.html">
+          <span class="tool-icon">→Z</span>
+          <h3>Harfle Biten Kelimeler</h3>
+          <p>Belirlediğin harf ya da ekle biten Türkçe kelimeleri bul.</p>
+          <span class="tool-tag">Bitiş filtresi →</span>
+        </a>
+<a class="tool-card" href="icinde-harf-gecen-kelimeler.html">
+          <span class="tool-icon">İÇ</span>
+          <h3>İçinde Harf Geçen Kelimeler</h3>
+          <p>Bir ifadeyi aynen içeren veya seçilen harflerin tümünü barındıran kelimeleri ara.</p>
+          <span class="tool-tag">İçerik filtresi →</span>
+        </a>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading">
+          <p class="eyebrow">NASIL ÇALIŞIR?</p>
+          <h2>Üç adımda hedefli sonuç</h2>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card">
+            <span class="step-number">1</span>
+            <h3>Doğru aracı seç</h3>
+            <p>Karışık harfler için Kelime Bulucu, tam eşleşme için Anagram, sabit konumlar için Kalıp Çözücü kullan.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">2</span>
+            <h3>Harflerini ve ölçütlerini gir</h3>
+            <p>Türkçe karakterleri doğrudan yazabilir, minimum ve maksimum kelime uzunluğunu belirleyebilirsin.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">3</span>
+            <h3>Sonuçları karşılaştır</h3>
+            <p>Sonuçlar uzunluğa ve Türkçe alfabetik sıraya göre düzenlenir; uygun kelimeyi kolayca seçebilirsin.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading">
+          <p class="eyebrow">REHBERLER</p>
+          <h2>Araçları daha verimli kullan</h2>
+          <p>Yalnızca sonuç listesi değil, doğru arama yöntemini seçmene yardımcı olacak açıklamalar ve örnekler de sunuyoruz.</p>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-card">
+            <h3>Kelime Bulucu nasıl kullanılır?</h3>
+            <p>Harf sayıları, uzunluk filtresi, Türkçe karakterler ve daha iyi sonuç almak için uygulanabilecek yöntemler.</p>
+            <a href="kelime-bulucu-nasil-kullanilir.html">Rehberi oku →</a>
+          </article>
+          <article class="guide-card">
+            <h3>Anagram nedir, nasıl çözülür?</h3>
+            <p>Anagram mantığı, tam harf eşleşmesi, tekrar eden harfler ve pratik çözüm teknikleri.</p>
+            <a href="anagram-nedir-nasil-cozulur.html">Rehberi oku →</a>
+          </article>
+          <article class="guide-card">
+            <h3>Sık sorulan sorular</h3>
+            <p>Joker kullanımı, sözlük kapsamı, harf tekrarları ve araçlar arasındaki farkların kısa cevapları.</p>
+            <a href="sik-sorulan-sorular.html">Cevapları gör →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading">
+          <p class="eyebrow">SIK SORULANLAR</p>
+          <h2>Başlamadan önce bilmen gerekenler</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+          <summary>KelimeLab hangi Türkçe karakterleri destekliyor?</summary>
+          <p>Araçlar Ç, Ğ, I, İ, Ö, Ş ve Ü dâhil Türkçe alfabedeki harfleri destekler. Büyük veya küçük harf kullanmanız sonucu değiştirmez.</p>
+        </details>
+<details class="faq-item">
+          <summary>Aynı harf birden fazla kez kullanılabilir mi?</summary>
+          <p>Kelime Bulucu ve Anagram Çözücü, bir harfi yalnızca girişte bulunduğu sayı kadar kullanır. Örneğin tek bir A harfi girildiğinde sonuçta iki A gerektiren kelimeler gösterilmez.</p>
+        </details>
+<details class="faq-item">
+          <summary>Anagram ile Kelime Bulucu arasındaki fark nedir?</summary>
+          <p>Kelime Bulucu, girilen harflerin bir kısmını veya tamamını kullanabilir. Anagram Çözücü ise bütün harflerin eksiksiz kullanılmasını şart koşar.</p>
+        </details>
+<details class="faq-item">
+          <summary>Joker karakter nasıl kullanılır?</summary>
+          <p>Jokerli Kelime Bulucu sayfasında soru işareti (?) veya yıldız (*) yazabilirsiniz. Her joker, eksik olan herhangi bir harfin yerine geçer.</p>
+        </details>
+        </div>
+      </section>
+
+      <div class="notice-card">
+        <strong>Sözlük notu:</strong>
+        KelimeLab geliştirme aşamasındaki temizlenmiş bir Türkçe kelime listesi kullanır.
+        Sonuçların belirli bir oyun, yarışma veya resmî sözlük tarafından kabul edileceği garanti edilmez.
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-brand" href="index.html">KelimeLab</a>
+        <p>Türkçe kelime bulma, anagram ve harf filtreleme araçları.</p>
+      </div>
+      <div>
+        <h2>Araçlar</h2>
+        <a href="kelime-bulucu.html">Kelime Bulucu</a>
+        <a href="anagram-cozucu.html">Anagram Çözücü</a>
+        <a href="jokerli-kelime-bulucu.html">Jokerli Bulucu</a>
+        <a href="kelime-kalibi-cozucu.html">Kalıp Çözücü</a>
+      </div>
+      <div>
+        <h2>İçerikler</h2>
+        <a href="kelime-bulucu-nasil-kullanilir.html">Kelime Bulucu Rehberi</a>
+        <a href="anagram-nedir-nasil-cozulur.html">Anagram Rehberi</a>
+        <a href="sik-sorulan-sorular.html">Sık Sorulan Sorular</a>
+      </div>
+      <div>
+        <h2>Kurumsal</h2>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+        <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+        <a href="iletisim.html">İletişim</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-current-year></span> KelimeLab</span>
+      <span>Geliştirme sözlüğü: <strong data-word-count>8.778</strong> kelime</span>
+    </div>
+  </footer>
+  <script src="kelimeler.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>

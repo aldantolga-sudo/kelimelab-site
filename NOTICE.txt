@@ -8,3 +8,8 @@ kesiştirilerek oluşturulmuştur.
 
 Bu liste resmî TDK sözlüğü değildir.
 Nihai sürümde ayrıca manuel ve kurala dayalı temizlik yapılacaktır.
+
+KELİMELAB v1.0 NOTU
+Bu paket, mevcut temizlenmiş geliştirme sözlüğünü kullanır.
+Araç sonuçları resmî sözlük veya belirli bir oyunun kabul listesi değildir.
+

@@ -2,22 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kelimelab-site.pages.dev/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://kelimelab-site.pages.dev/kelime-bulucu.html</loc>
+    <lastmod>2026-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://kelimelab-site.pages.dev/anagram-cozucu.html</loc>
+    <lastmod>2026-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://kelimelab-site.pages.dev/jokerli-kelime-bulucu.html</loc>
+    <lastmod>2026-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://kelimelab-site.pages.dev/kelime-kalibi-cozucu.html</loc>
+    <lastmod>2026-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://kelimelab-site.pages.dev/harfle-baslayan-kelimeler.html</loc>
+    <lastmod>2026-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://kelimelab-site.pages.dev/harfle-biten-kelimeler.html</loc>
+    <lastmod>2026-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://kelimelab-site.pages.dev/icinde-harf-gecen-kelimeler.html</loc>
+    <lastmod>2026-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://kelimelab-site.pages.dev/kelime-bulucu-nasil-kullanilir.html</loc>
+    <lastmod>2026-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://kelimelab-site.pages.dev/anagram-nedir-nasil-cozulur.html</loc>
+    <lastmod>2026-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://kelimelab-site.pages.dev/sik-sorulan-sorular.html</loc>
+    <lastmod>2026-06-18</lastmod>
   </url>
   <url>
     <loc>https://kelimelab-site.pages.dev/hakkimizda.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-06-18</lastmod>
   </url>
   <url>
     <loc>https://kelimelab-site.pages.dev/gizlilik-politikasi.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-06-18</lastmod>
   </url>
   <url>
     <loc>https://kelimelab-site.pages.dev/kullanim-kosullari.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-06-18</lastmod>
   </url>
   <url>
     <loc>https://kelimelab-site.pages.dev/iletisim.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-06-18</lastmod>
   </url>
 </urlset>

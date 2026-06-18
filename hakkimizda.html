@@ -1,79 +1,111 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="tr">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Hakkımızda | KelimeLab</title>
-<meta content="KelimeLab projesinin amacı, Türkçe kelime araçları ve geliştirme yaklaşımı hakkında bilgi edinin." name="description"/>
-<link href="style.css" rel="stylesheet"/>
-<link href="https://kelimelab-site.pages.dev/hakkimizda.html" rel="canonical"/><meta content="website" property="og:type"/><meta content="Hakkımızda | KelimeLab" property="og:title"/><meta content="KelimeLab projesinin amacı, Türkçe kelime araçları ve geliştirme yaklaşımı hakkında bilgi edinin." property="og:description"/><meta content="https://kelimelab-site.pages.dev/hakkimizda.html" property="og:url"/><meta content="summary" name="twitter:card"/></head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hakkımızda | KelimeLab</title>
+  <meta name="description" content="KelimeLab&#x27;ın amacı, Türkçe kelime araçları, sözlük yaklaşımı ve geliştirme hedefleri hakkında bilgi edinin.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://kelimelab-site.pages.dev/hakkimizda.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="KelimeLab">
+  <meta property="og:title" content="Hakkımızda | KelimeLab">
+  <meta property="og:description" content="KelimeLab&#x27;ın amacı, Türkçe kelime araçları, sözlük yaklaşımı ve geliştirme hedefleri hakkında bilgi edinin.">
+  <meta property="og:url" content="https://kelimelab-site.pages.dev/hakkimizda.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<header class="site-header">
-<div class="container header-inner">
-<a class="brand" href="index.html">KelimeLab</a>
-<nav aria-label="Ana menü" class="site-nav">
-<a href="index.html">Araçlar</a>
-<a aria-current="page" href="hakkimizda.html">Hakkımızda</a>
-<a href="gizlilik-politikasi.html">Gizlilik</a>
-<a href="kullanim-kosullari.html">Koşullar</a>
-<a href="iletisim.html">İletişim</a>
-</nav>
-</div>
-</header>
-<main class="container">
-<section class="page-hero">
-<p class="eyebrow">KELİMELAB</p>
-<h1>Hakkımızda</h1>
-<p>KelimeLab'ın amacı, sunduğu araçlar ve geliştirme yaklaşımı.</p>
-</section>
-<article class="content-card">
-<section>
-<h2>KelimeLab nedir?</h2>
-<p>
-    KelimeLab, Türkçe kelime oyunlarında ve bulmacalarda kullanılabilecek
-    ücretsiz kelime araçları geliştiren bağımsız bir web projesidir.
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="KelimeLab ana sayfa">
+        <span class="brand-mark">K</span>
+        <span>KelimeLab</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+        Menü
+      </button>
+      <nav id="main-nav" class="site-nav" aria-label="Ana menü">
+        <a href="index.html">Ana Sayfa</a>
+          <a href="kelime-bulucu.html">Kelime Bulucu</a>
+          <a href="anagram-cozucu.html">Anagram</a>
+          <a href="index.html#tum-araclar">Tüm Araçlar</a>
+          <a href="sik-sorulan-sorular.html">SSS</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="eyebrow">KELİMELAB</p>
+        <h1>Hakkımızda</h1>
+        <p class="hero-copy">Türkçe kelime aramalarını daha hızlı, anlaşılır ve kullanışlı hâle getiren bağımsız araç projesi.</p>
+      </div>
+    </section>
+    <div class="container">
+      
+<article class="prose-card">
+  <h2>KelimeLab nedir?</h2>
+  <p>
+    KelimeLab; kelime oyunları, anagramlar ve bulmacalar için ücretsiz Türkçe kelime araçları
+    geliştiren bağımsız bir web projesidir. Amaç, telefonda ve bilgisayarda hızlı çalışan,
+    karmaşık olmayan ve kullanıcının aradığı sonucu doğrudan sunan bir araç merkezi oluşturmaktır.
   </p>
-</section>
-<section>
-<h2>Şu anda neler sunuyor?</h2>
-<ul>
-<li>Girilen harflerden oluşturulabilecek kelimeleri bulma</li>
-<li>Kelime uzunluğuna göre sonuç filtreleme</li>
-<li>Tüm harfleri kullanan tam anagramları çözme</li>
-<li>Türkçe karakterlerle çalışma</li>
-</ul>
-</section>
-<section>
-<h2>Geliştirme durumu</h2>
-<p>
-    KelimeLab aktif geliştirme aşamasındadır. Kullanılan sözlük,
-    yaygınlık verileriyle Türkçe sözlük verilerinin kesişiminden oluşturulmuş
-    bir geliştirme sözlüğüdür. Sonuçlar zaman içinde gözden geçirilip iyileştirilecektir.
+  <h2>Neler sunuyoruz?</h2>
+  <p>
+    Harflerden kelime bulma, tam anagram çözme, joker kullanma, eksik harf kalıbı tamamlama,
+    başlangıç ve bitiş filtresi ile kelimenin içinde geçen harfleri arama araçları sunulmaktadır.
+    Araçların yanında kullanım rehberleri ve açıklayıcı içerikler de yayımlanır.
   </p>
-</section>
-<section>
-<h2>Projenin amacı</h2>
-<p>
-    Amaç; hızlı açılan, telefonda rahat kullanılan ve gereksiz karmaşadan uzak
-    Türkçe kelime araçları oluşturmaktır.
+  <h2>Sözlük yaklaşımı</h2>
+  <p>
+    Mevcut kelime listesi, Türkçe yaygınlık verileriyle sözlük verilerinin kesişiminden
+    oluşturulmuş geliştirme sözlüğüdür. Özel adları, kısaltmaları ve rastgele harf birleşimlerini
+    azaltmak için temizlik uygulanmıştır. Bununla birlikte nihai ve resmî bir sözlük değildir.
   </p>
-</section>
+  <h2>Geliştirme hedefi</h2>
+  <p>
+    Sonuç kalitesini artırmak, hatalı kelime bildirimlerini değerlendirmek, yeni arama araçları
+    ve günlük kelime içerikleri eklemek projenin devam eden hedefleridir.
+  </p>
 </article>
-</main>
-<footer class="site-footer">
-<div class="container footer-inner">
-<span>© <span id="year"></span> KelimeLab</span>
-<nav aria-label="Alt menü" class="footer-links">
-<a href="hakkimizda.html">Hakkımızda</a>
-<a href="gizlilik-politikasi.html">Gizlilik</a>
-<a href="kullanim-kosullari.html">Kullanım Koşulları</a>
-<a href="iletisim.html">İletişim</a>
-</nav>
-</div>
-</footer>
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-brand" href="index.html">KelimeLab</a>
+        <p>Türkçe kelime bulma, anagram ve harf filtreleme araçları.</p>
+      </div>
+      <div>
+        <h2>Araçlar</h2>
+        <a href="kelime-bulucu.html">Kelime Bulucu</a>
+        <a href="anagram-cozucu.html">Anagram Çözücü</a>
+        <a href="jokerli-kelime-bulucu.html">Jokerli Bulucu</a>
+        <a href="kelime-kalibi-cozucu.html">Kalıp Çözücü</a>
+      </div>
+      <div>
+        <h2>İçerikler</h2>
+        <a href="kelime-bulucu-nasil-kullanilir.html">Kelime Bulucu Rehberi</a>
+        <a href="anagram-nedir-nasil-cozulur.html">Anagram Rehberi</a>
+        <a href="sik-sorulan-sorular.html">Sık Sorulan Sorular</a>
+      </div>
+      <div>
+        <h2>Kurumsal</h2>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+        <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+        <a href="iletisim.html">İletişim</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-current-year></span> KelimeLab</span>
+      <span>Geliştirme sözlüğü: <strong data-word-count>8.778</strong> kelime</span>
+    </div>
+  </footer>
+  <script src="site.js"></script>
 </body>
 </html>
