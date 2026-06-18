@@ -125,3 +125,11 @@ v2.3 GÜNÜN KELİMESİ GÖNDER DÜĞMESİ
 - Sanal klavyedeki “GİR” tuşu “GÖNDER” olarak değiştirildi.
 - Fiziksel klavyedeki Enter tuşu çalışmaya devam eder.
 - Oyun tamamlanınca gönder düğmesi pasifleşir ve durum açıkça gösterilir.
+
+
+v2.4 ADSENSE BAĞLANTI KODU
+- Google AdSense yayıncı kodu bütün HTML sayfalarının <head> bölümüne eklendi.
+- Yayıncı kimliği: ca-pub-3630588197085031
+- Bu paket GitHub/Cloudflare üzerinde canlıya alındıktan sonra AdSense ekranındaki
+  "Kodu yerleştirdim" kutusu işaretlenip "Doğrula" düğmesine basılmalıdır.
+- Google doğrulama dosyasını depodan silmeyin.
