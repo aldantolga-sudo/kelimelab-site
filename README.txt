@@ -133,3 +133,45 @@ v2.4 ADSENSE BAĞLANTI KODU
 - Bu paket GitHub/Cloudflare üzerinde canlıya alındıktan sonra AdSense ekranındaki
   "Kodu yerleştirdim" kutusu işaretlenip "Doğrula" düğmesine basılmalıdır.
 - Google doğrulama dosyasını depodan silmeyin.
+
+
+KELİMELAB v2.5 — İÇERİK VE TRAFİK PAKETİ
+
+YENİ SAYFALAR
+- rehberler.html
+- kelime-bilgisi.html
+- icerik-ilkeleri.html
+- kelime-dagarcigi-gelistirme.html
+- gunun-kelimesi-stratejileri.html
+- harf-cemberi-stratejileri.html
+- kelime-kalibi-cozme-rehberi.html
+- jokerli-kelime-stratejileri.html
+- turkce-ozel-harfler.html
+- kelime-oyunlari-stratejileri.html
+
+YENİ ÖZELLİKLER
+- 57 kelimelik aranabilir Kelime Bilgisi Arşivi
+- 7 yeni kapsamlı özgün rehber
+- Rehberler içerik merkezi
+- İçerik ve sözlük şeffaflığı sayfası
+- Bütün sayfalarda güncellenmiş ana menü ve footer
+- Ana sayfada Bilgi ve Rehberler bölümü
+- Araç ve bulmaca sayfalarından ilgili rehberlere iç bağlantılar
+- Article, Breadcrumb ve CollectionPage yapılandırılmış verileri
+- Sitemap'e 10 yeni indekslenebilir sayfa
+- Google AdSense kodu bütün yeni sayfalarda korunmuştur
+
+TEST LİSTESİ
+1. index.html üzerinde Bilgi ve Rehberler bölümünü aç.
+2. rehberler.html sayfasındaki bütün kartları kontrol et.
+3. kelime-bilgisi.html üzerinde arama ve kategori filtresini dene.
+4. Yeni rehberlerin mobil görünümünü kontrol et.
+5. Ana menüde Rehberler ve Kelime Bilgisi bağlantılarını dene.
+6. gunun-kelimesi.html ve harf-cemberi.html altındaki ilgili rehber kutularını aç.
+7. sitemap.xml dosyasının tarayıcıda açıldığını kontrol et.
+8. AdSense kodunun yeni sayfalarda da kaynak kodunda bulunduğunu doğrula.
+
+ÖNEMLİ
+- GitHub'daki google240e23f175358c3e.html dosyasını silme.
+- AdSense kodunu kaldırma.
+- Bütün dosyaları aynı anda yükle; yeni sayfaları eksik bırakma.

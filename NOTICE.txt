@@ -19,3 +19,9 @@ KELİMELAB v2.0 BULMACA NOTU
 Günlük kelime açıklamaları KelimeLab için özgün ve kısa bilgi metinleri olarak hazırlanmıştır.
 Bunlar resmî sözlük maddesi yerine kullanıcıya anlaşılır bağlam sunmayı amaçlar.
 Bulmaca ilerlemesi ve istatistikleri mevcut sürümde yalnızca tarayıcı yerel depolamasında tutulur.
+
+
+KELİMELAB v2.5 İÇERİK NOTU
+Yeni rehberler ve kelime açıklamaları KelimeLab için özgün hazırlanmıştır.
+Kelime Bilgisi Arşivi resmî sözlük yerine geçmez.
+Geliştirme sözlüğü 8.778 filtrelenmiş kelimeden oluşur ve bütün Türkçe sözcükleri kapsadığı iddiasında değildir.
