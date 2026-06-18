@@ -343,6 +343,7 @@
     const keyboard = document.getElementById("wordKeyboard");
     const message = document.getElementById("wordMessage");
     const shareButton = document.getElementById("wordShareButton");
+    const submitButton = document.getElementById("wordSubmitButton");
     const helpButton = document.getElementById("wordHelpButton");
     const helpDialog = document.getElementById("wordHelpDialog");
     const keyboardStates = {};
@@ -383,7 +384,7 @@
           button.className = "keyboard-key";
 
           if (key === "ENTER") {
-            button.textContent = "GİR";
+            button.textContent = "GÖNDER";
             button.classList.add("wide");
           } else if (key === "BACKSPACE") {
             button.textContent = "⌫";
@@ -438,6 +439,13 @@
         }
       });
 
+      if (submitButton) {
+        submitButton.disabled = state.status !== "playing";
+        submitButton.textContent = state.status === "playing"
+          ? "Tahmini Gönder"
+          : "Bugünkü Oyun Tamamlandı";
+      }
+
       if (state.status === "won") {
         message.textContent = `Tebrikler! ${trUpper(answer)} kelimesini ${state.guesses.length} tahminde buldun.`;
         message.className = "game-message success";
@@ -467,7 +475,7 @@
       if (state.status !== "playing") return;
 
       if (state.current.length !== answer.length) {
-        message.textContent = "Beş harf yazmalısın.";
+        message.textContent = "Önce beş harfi tamamla, sonra Tahmini Gönder düğmesine bas.";
         shakeCurrentRow();
         return;
       }
@@ -518,6 +526,10 @@
         state.current += character;
         render();
       }
+    }
+
+    if (submitButton) {
+      submitButton.addEventListener("click", submitGuess);
     }
 
     document.addEventListener("keydown", (event) => {

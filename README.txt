@@ -118,3 +118,10 @@ v2.2 ANAGRAM TAMAMLAMA PENCERESİ
 - Deneme ve kullanılan ipucu sayısı gösterilir.
 - Sonucu paylaş ve Başka anagram çöz seçenekleri pencerede bulunur.
 - Pencere X, Kapat veya arka alana dokunarak kapatılabilir.
+
+
+v2.3 GÜNÜN KELİMESİ GÖNDER DÜĞMESİ
+- Tahmin tablosunun altına büyük “Tahmini Gönder” düğmesi eklendi.
+- Sanal klavyedeki “GİR” tuşu “GÖNDER” olarak değiştirildi.
+- Fiziksel klavyedeki Enter tuşu çalışmaya devam eder.
+- Oyun tamamlanınca gönder düğmesi pasifleşir ve durum açıkça gösterilir.
