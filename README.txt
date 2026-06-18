@@ -48,3 +48,16 @@ Mevcut google doğrulama dosyası depoda kalacaktır.
 
 SONRAKİ ADIM
 Canlı testten sonra Google Search Console'da sitemap durumu ve yeni URL'ler kontrol edilir.
+
+
+v1.1 İLETİŞİM GÜNCELLEMESİ
+- Proje e-posta adresi eklendi: kelimelabiletisim@gmail.com
+- İletişim sayfası güncellendi.
+- Gizlilik Politikası güncellendi.
+- Footer'a e-posta bağlantısı eklendi.
+
+TEST
+1. index.html dosyasını açın.
+2. Alt menüde E-posta bağlantısına tıklayın.
+3. iletisim.html sayfasında kelimelabiletisim@gmail.com göründüğünü kontrol edin.
+4. gizlilik-politikasi.html sayfasında aynı adresin yer aldığını kontrol edin.
