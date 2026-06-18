@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <!-- Google AdSense site doğrulama ve reklam kodu -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3630588197085031"
+       crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uzman Seviye Türkçe Kelime Testi | KelimeLab</title>
+  <meta name="description" content="Her gün yenilenen zor seviye 10 soruluk Türkçe kelime testini çöz; anlam, örnek cümle ve ters eşleştirme sorularıyla bilgini ölç.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://kelimelab-site.pages.dev/kelime-testi.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="KelimeLab">
+  <meta property="og:title" content="Günlük Türkçe Kelime Testi — 10 Soru | KelimeLab">
+  <meta property="og:description" content="Her gün yenilenen zor seviye 10 soruluk Türkçe kelime testini çöz; anlam, örnek cümle ve ters eşleştirme sorularıyla bilgini ölç.">
+  <meta property="og:url" content="https://kelimelab-site.pages.dev/kelime-testi.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"KelimeLab Günlük Kelime Testi","url":"https://kelimelab-site.pages.dev/kelime-testi.html","applicationCategory":"EducationalApplication","operatingSystem":"Web","inLanguage":"tr","description":"Her gün yenilenen 10 soruluk Türkçe kelime anlamı testi.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"}}</script>
+</head>
+<body data-learning-page="quiz">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="KelimeLab ana sayfa">
+        <span class="brand-mark">K</span>
+        <span>KelimeLab</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menü</button>
+      <nav id="main-nav" class="site-nav" aria-label="Ana menü">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="kelime-bulucu.html">Kelime Bulucu</a>
+        <a href="anagram-cozucu.html">Anagram</a>
+        <a href="bulmacalar.html">Bulmacalar</a>
+        <a href="rehberler.html">Rehberler</a>
+        <a href="kelime-bilgisi.html">Kelime Bilgisi</a>
+        <a href="sik-sorulan-sorular.html">SSS</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero compact-puzzle-hero">
+      <div class="container narrow">
+        <p class="eyebrow">HER GÜN 10 SORU</p>
+        <h1>Günlük Kelime Testi</h1>
+        <p class="hero-copy">Cevabı kendin yaz. İleri düzey kelimeleri tanım, kullanım ve anlam ayrımı üzerinden çöz.</p>
+        <div class="daily-date" id="quizDate"></div>
+      </div>
+    </section>
+
+    <div class="container quiz-layout">
+      <section class="quiz-panel">
+        <section class="quiz-stats" aria-label="Kelime testi istatistikleri">
+          <div><strong id="quizPlayed">0</strong><span>Oynanan</span></div>
+          <div><strong id="quizBest">0/10</strong><span>En iyi</span></div>
+          <div><strong id="quizStreak">0</strong><span>Seri</span></div>
+          <div><strong id="quizMaxStreak">0</strong><span>En iyi seri</span></div>
+        </section>
+
+        <div class="quiz-progress-row">
+          <span id="quizQuestionNumber">Soru 1/10</span>
+          <span id="quizLiveScore">Puan 0</span>
+        </div>
+        <div class="quiz-progress-bar"><span id="quizProgressFill"></span></div>
+
+        <section class="quiz-question-card expert-question-card">
+          <span class="quiz-category hard-level" id="quizQuestionType">UZMAN SEVİYE</span>
+          <p class="quiz-prompt" id="quizPrompt">Tanıma uyan kelimeyi yaz.</p>
+          <h2 id="quizMeaning">Soru hazırlanıyor…</h2>
+          <div class="expert-meta">
+            <span id="quizLetterCount">— harf</span>
+            <span id="quizPattern">_ _ _ _</span>
+          </div>
+        </section>
+
+        <form class="expert-answer-form" id="quizAnswerForm" novalidate>
+          <label for="quizAnswerInput">Cevabın</label>
+          <div class="expert-answer-row">
+            <input id="quizAnswerInput" type="text" autocomplete="off" spellcheck="false" placeholder="Kelimeyi yaz">
+            <button class="primary-button" type="submit">Cevabı kontrol et</button>
+          </div>
+        </form>
+
+        <div class="expert-actions">
+          <button class="secondary-button" id="quizHintButton" type="button">Harf ipucu al (−1 puan)</button>
+          <button class="secondary-button" id="quizSkipButton" type="button">Soruyu geç</button>
+        </div>
+
+        <section class="quiz-feedback" id="quizFeedback" hidden aria-live="polite">
+          <p class="eyebrow" id="quizFeedbackLabel">DOĞRU CEVAP</p>
+          <h2 id="quizFeedbackWord"></h2>
+          <blockquote id="quizFeedbackExample"></blockquote>
+          <p id="quizFeedbackNote"></p>
+          <button class="primary-button" id="quizNextButton" type="button">Sonraki soru</button>
+        </section>
+      </section>
+
+      <aside class="quiz-side">
+        <section class="legend-card">
+          <h2>Nasıl çalışır?</h2>
+          <p>Çoktan seçmeli seçenek yoktur; cevabı doğrudan yazarsın.</p>
+          <p>Sorular tanım, boşluklu örnek ve ince anlam ayrımı biçiminde gelir.</p>
+          <p>İpucu aldığında bir harf açılır ve o sorunun puanı düşer.</p>
+          <p>Test Türkiye saatine göre her gün yenilenir.</p>
+        </section>
+        <section class="countdown-card">
+          <span>Yeni teste</span>
+          <strong id="quizCountdown">--:--:--</strong>
+        </section>
+        <a class="quiz-side-link" href="kelime-bilgisi.html">
+          <strong>Kelime Bilgisi Arşivi</strong>
+          <span>Bütün açıklamaları incele →</span>
+        </a>
+      </aside>
+    </div>
+
+    <div class="container">
+      <section class="prose-card">
+        <h2>Kelime testi neyi ölçer?</h2>
+        <p>
+          Bu test, kısa açıklamadan doğru kelimeyi tanıma ve seçenekler arasından ayırt etme
+          becerisini çalıştırır. Sonuç resmî dil yeterlilik ölçümü değildir; günlük öğrenme ve
+          tekrar amacıyla hazırlanmıştır.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <dialog class="quiz-result-dialog" id="quizResultDialog" aria-labelledby="quizResultTitle">
+    <div class="quiz-result-inner">
+      <button class="completion-dialog-close" id="quizResultClose" type="button" aria-label="Kapat">×</button>
+      <div class="completion-dialog-icon" id="quizResultIcon">✓</div>
+      <p class="eyebrow">BUGÜNKÜ TEST TAMAMLANDI</p>
+      <h2 id="quizResultTitle">Sonucun</h2>
+      <strong class="quiz-final-score" id="quizFinalScore">0/10</strong>
+      <p id="quizResultMessage"></p>
+      <div class="completion-dialog-actions">
+        <button class="primary-button" id="quizShareButton" type="button">Sonucu paylaş</button>
+        <a class="secondary-link" href="kelime-ogrenme-merkezi.html">Öğrenme merkezine dön</a>
+      </div>
+      <button class="completion-dialog-dismiss" id="quizResultDismiss" type="button">Kapat</button>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-brand" href="index.html">KelimeLab</a>
+        <p>Türkçe kelime araçları, günlük bulmacalar ve özgün açıklayıcı içerikler.</p>
+      </div>
+      <div>
+        <h2>Araçlar</h2>
+        <a href="kelime-bulucu.html">Kelime Bulucu</a>
+        <a href="anagram-cozucu.html">Anagram Çözücü</a>
+        <a href="jokerli-kelime-bulucu.html">Jokerli Bulucu</a>
+        <a href="kelime-kalibi-cozucu.html">Kalıp Çözücü</a>
+      </div>
+      <div>
+        <h2>Öğren ve Oyna</h2>
+        <a href="kelime-ogrenme-merkezi.html">Kelime Öğrenme Merkezi</a>
+        <a href="kelime-testi.html">Günlük Kelime Testi</a>
+        <a href="kelime-bilgisi.html">Kelime Bilgisi Arşivi</a>
+        <a href="rehberler.html">Kelime Rehberleri</a>
+        <a href="bulmacalar.html">Günlük Bulmacalar</a>
+      </div>
+      <div>
+        <h2>Kurumsal</h2>
+        <a href="icerik-ilkeleri.html">İçerik İlkeleri</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+        <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+        <a href="iletisim.html">İletişim</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-current-year></span> KelimeLab</span>
+      <span>Geliştirme sözlüğü: <strong data-word-count>8.778</strong> kelime</span>
+    </div>
+  </footer>
+  <script src="site.js"></script>
+  <script src="uzman-kelime-data.js"></script>
+  <script src="kelime-testi.js"></script>
+</body>
+</html>

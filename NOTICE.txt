@@ -25,3 +25,9 @@ KELİMELAB v2.5 İÇERİK NOTU
 Yeni rehberler ve kelime açıklamaları KelimeLab için özgün hazırlanmıştır.
 Kelime Bilgisi Arşivi resmî sözlük yerine geçmez.
 Geliştirme sözlüğü 8.778 filtrelenmiş kelimeden oluşur ve bütün Türkçe sözcükleri kapsadığı iddiasında değildir.
+
+
+KELİMELAB v2.6 ÖĞRENME NOTU
+Kelime Testi eğitim ve eğlence amaçlıdır; resmî dil yeterlilik ölçümü değildir.
+Test soruları mevcut 57 özgün kelime açıklamasından günlük olarak seçilir.
+Yeni rehberler az sayıda, kapsamlı ve kullanıcıya doğrudan yardımcı olacak biçimde hazırlanmıştır.

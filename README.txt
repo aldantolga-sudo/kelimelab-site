@@ -175,3 +175,82 @@ TEST LİSTESİ
 - GitHub'daki google240e23f175358c3e.html dosyasını silme.
 - AdSense kodunu kaldırma.
 - Bütün dosyaları aynı anda yükle; yeni sayfaları eksik bırakma.
+
+
+KELİMELAB v2.6 — KELİME ÖĞRENME MERKEZİ
+
+YENİ ETKİLEŞİMLİ ÖZELLİK
+- Her gün yenilenen 10 soruluk Kelime Testi
+- Açıklamadan doğru kelimeyi seçme
+- Her cevapta örnek cümle ve ek bilgi
+- Günlük puan, en iyi sonuç, seri ve en iyi seri
+- İlerleme tarayıcıda saklanır
+- Test bitince küçük sonuç penceresi ve paylaşım
+- Türkiye saatine göre günlük yenilenme
+
+YENİ SAYFALAR
+- kelime-ogrenme-merkezi.html
+- kelime-testi.html
+- anagram-ileri-teknikler.html
+- bes-harfli-kelime-stratejileri.html
+- turkce-kelime-koku-ve-ekler.html
+- kelime-oyunlarinda-sik-yapilan-hatalar.html
+- turkce-hece-yapisi.html
+- 30-gunluk-kelime-programi.html
+
+GÜNCELLEMELER
+- Rehberler sayfasına 6 kapsamlı içerik eklendi
+- Ana sayfaya Kelime Öğrenme kartı eklendi
+- Kelime Bilgisi ve Bulmacalar sayfalarına test bağlantısı eklendi
+- Bütün footer'lar Öğren ve Oyna bölümüyle güncellendi
+- Gizlilik ve İçerik İlkeleri test verileri için güncellendi
+- Sitemap toplam 38 URL içerir
+- AdSense kodu bütün yeni sayfalarda korunmuştur
+
+TEST LİSTESİ
+1. kelime-ogrenme-merkezi.html sayfasını aç.
+2. kelime-testi.html üzerinde 10 soruyu tamamla.
+3. Doğru ve yanlış cevap geri bildirimlerini kontrol et.
+4. Test bitince sonuç penceresinin açıldığını doğrula.
+5. Sayfayı yenileyince sonucun korunduğunu kontrol et.
+6. Ertesi gün testin yenileneceğini gösteren sayacı kontrol et.
+7. Rehberler sayfasındaki yeni kartları aç.
+8. Mobil görünümde seçeneklerin ve popup'ın taşmadığını kontrol et.
+9. sitemap.xml dosyasını aç.
+10. GitHub'daki google240e23f175358c3e.html dosyasını silme.
+
+
+KELİMELAB v2.7 — ZOR KELİME TESTİ
+
+DEĞİŞİKLİKLER
+- Test artık varsayılan olarak Zor Seviye.
+- Her soruda 4 yerine 5 seçenek bulunur.
+- Çeldiriciler önce aynı kategoriden, sonra benzer uzunluktaki kelimelerden seçilir.
+- Kategori bilgisi cevap öncesinde gizlenir.
+- Üç farklı soru türü dönüşümlü kullanılır:
+  1) Açıklamadan kelimeyi bul
+  2) Kelimeden doğru açıklamayı bul
+  3) Boşluklu örnek cümleden kelimeyi bul
+- Yanlış cevapta kullanıcının seçimi de gösterilir.
+- Sonuç değerlendirmesi zor seviyeye göre güncellendi.
+- Yeni depolama anahtarı sayesinde önceki günlük test sonucu yeni testi engellemez.
+
+TEST
+1. kelime-testi.html sayfasını aç.
+2. Aynı kategoriye yakın seçeneklerin geldiğini kontrol et.
+3. Uzun açıklama seçeneklerinin tek sütunda göründüğünü kontrol et.
+4. Örnek cümlede hedef kelimenin boşlukla değiştirildiğini kontrol et.
+5. On sorudan sonra sonuç penceresini kontrol et.
+
+
+KELİMELAB v2.8 — UZMAN SEVİYE KELİME TESTİ
+
+- Çoktan seçmeli yapı tamamen kaldırıldı.
+- Kullanıcı cevabı doğrudan yazar.
+- 58 ileri düzey Türkçe kelimeden günlük 10 soru seçilir.
+- Tanımdan kelime, boşluklu cümle ve ince anlam ayrımı soru türleri vardır.
+- Her soru 2 puandır; harf ipucu kullanılırsa puan düşer.
+- İlk, son ve orta harf kademeli ipucu olarak açılır.
+- Soruyu geçme seçeneği vardır.
+- Maksimum günlük puan 20'dir.
+- Eski test kayıtları yeni uzman testini kilitlemez.
