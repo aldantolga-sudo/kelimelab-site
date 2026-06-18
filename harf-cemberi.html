@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Günlük Harf Çemberi — Türkçe Kelime Üretme Oyunu | KelimeLab</title>
+  <meta name="description" content="Yedi harfi kullanarak merkez harfin zorunlu olduğu Türkçe kelimeler üret; puanını, bulunan kelimeleri ve günlük ilerlemeni takip et.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://kelimelab-site.pages.dev/harf-cemberi.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="KelimeLab">
+  <meta property="og:title" content="Günlük Harf Çemberi — Türkçe Kelime Üretme Oyunu | KelimeLab">
+  <meta property="og:description" content="Yedi harfi kullanarak merkez harfin zorunlu olduğu Türkçe kelimeler üret; puanını, bulunan kelimeleri ve günlük ilerlemeni takip et.">
+  <meta property="og:url" content="https://kelimelab-site.pages.dev/harf-cemberi.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Game","name":"KelimeLab Harf Çemberi","url":"https://kelimelab-site.pages.dev/harf-cemberi.html","inLanguage":"tr","numberOfPlayers":"1","description":"Her gün yenilenen yedi harfli Türkçe kelime üretme bulmacası."}</script>
+</head>
+<body data-puzzle-page="circle">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="KelimeLab ana sayfa">
+        <span class="brand-mark">K</span>
+        <span>KelimeLab</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menü</button>
+      <nav id="main-nav" class="site-nav" aria-label="Ana menü">
+        <a href="index.html">Ana Sayfa</a>
+          <a href="kelime-bulucu.html">Kelime Bulucu</a>
+          <a href="anagram-cozucu.html">Anagram</a>
+          <a href="bulmacalar.html" aria-current="page">Bulmacalar</a>
+          <a href="index.html#tum-araclar">Tüm Araçlar</a>
+          <a href="sik-sorulan-sorular.html">SSS</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero compact-puzzle-hero">
+      <div class="container narrow">
+        <p class="eyebrow">YEDİ HARF, BİR MERKEZ</p>
+        <h1>Harf Çemberi</h1>
+        <p class="hero-copy">Merkez harfi mutlaka kullanarak mümkün olduğunca çok kelime üret.</p>
+        <div class="puzzle-date-row">
+          <span data-puzzle-date></span>
+          <span class="archive-badge" data-archive-badge hidden>Arşiv bulmacası</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container puzzle-layout">
+      <section class="game-panel">
+        <section class="circle-scoreboard">
+          <div><span>Puan</span><strong id="circleScore">0</strong></div>
+          <div><span>Bulunan</span><strong id="circleFoundCount">0</strong></div>
+          <div><span>Seviye</span><strong id="circleRank">Başlangıç</strong></div>
+        </section>
+
+        <div class="circle-theme" id="circleTheme"></div>
+        <div class="circle-current-word" id="circleCurrentWord" aria-live="polite">Harfleri seç</div>
+        <div class="letter-wheel" id="letterWheel" aria-label="Harf çemberi"></div>
+
+        <div class="circle-controls">
+          <button class="secondary-button" id="circleDeleteButton" type="button">Sil</button>
+          <button class="secondary-button" id="circleShuffleButton" type="button">Karıştır</button>
+          <button class="primary-button" id="circleSubmitButton" type="button">Kelimeyi ekle</button>
+        </div>
+
+        <div class="game-message" id="circleMessage" aria-live="polite">
+          En az 4 harfli bir kelime oluştur.
+        </div>
+
+        <div class="circle-progress">
+          <div class="circle-progress-bar"><span id="circleProgressFill"></span></div>
+          <small id="circleProgressText">İlk kelimeni bul.</small>
+        </div>
+
+        <div class="puzzle-actions">
+          <button class="secondary-button" id="circleRevealButton" type="button">Cevapları göster</button>
+          <button class="primary-button" id="circleShareButton" type="button">Sonucu paylaş</button>
+        </div>
+      </section>
+
+      <aside class="puzzle-side">
+        <section class="countdown-card">
+          <span>Yeni bulmacaya</span>
+          <strong data-countdown>--:--:--</strong>
+        </section>
+        <section class="legend-card">
+          <h2>Puanlama</h2>
+          <p>4 harf: 1 puan</p>
+          <p>5 harf: 2 puan</p>
+          <p>6 harf: 3 puan</p>
+          <p>7+ harf: 5 puan</p>
+          <p>Bütün harfleri kullanan kelime: +7 bonus</p>
+        </section>
+      </aside>
+    </div>
+
+    <div class="container">
+      <section class="found-words-card">
+        <div class="found-words-heading">
+          <h2>Bulduğun kelimeler</h2>
+          <span id="circleFoundSummary">Henüz kelime yok</span>
+        </div>
+        <div id="circleFoundWords" class="found-word-list"></div>
+      </section>
+
+      <section class="word-info-card" id="circleAnswersCard" hidden>
+        <p class="eyebrow">BUGÜNÜN CEVAPLARI</p>
+        <h2>Harf Çemberi çözüm listesi</h2>
+        <p id="circleAnswerIntro"></p>
+        <div id="circleAllAnswers" class="answer-groups"></div>
+      </section>
+
+      <section class="prose-card">
+        <h2>Harf Çemberi kuralları</h2>
+        <ul>
+          <li>Her kelime en az 4 harfli olmalıdır.</li>
+          <li>Ortadaki sarı harf her kelimede bulunmalıdır.</li>
+          <li>Yalnızca çemberdeki yedi harf kullanılabilir; harfler tekrar kullanılabilir.</li>
+          <li>Aynı kelime ikinci kez puan kazandırmaz.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-brand" href="index.html">KelimeLab</a>
+        <p>Türkçe kelime araçları, günlük bulmacalar ve açıklayıcı kelime içerikleri.</p>
+      </div>
+      <div>
+        <h2>Araçlar</h2>
+        <a href="kelime-bulucu.html">Kelime Bulucu</a>
+        <a href="anagram-cozucu.html">Anagram Çözücü</a>
+        <a href="jokerli-kelime-bulucu.html">Jokerli Bulucu</a>
+        <a href="kelime-kalibi-cozucu.html">Kalıp Çözücü</a>
+      </div>
+      <div>
+        <h2>Bulmacalar</h2>
+        <a href="gunun-kelimesi.html">Günün Kelimesi</a>
+        <a href="gunluk-anagram.html">Günlük Anagram</a>
+        <a href="harf-cemberi.html">Harf Çemberi</a>
+        <a href="bulmaca-arsivi.html">Bulmaca Arşivi</a>
+      </div>
+      <div>
+        <h2>Kurumsal</h2>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+        <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="mailto:kelimelabiletisim@gmail.com">E-posta</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-current-year></span> KelimeLab</span>
+      <span>Geliştirme sözlüğü: <strong data-word-count>8,778</strong> kelime</span>
+    </div>
+  </footer>
+  <script src="kelimeler.js"></script>
+  <script src="site.js"></script>
+  <script src="bulmaca-data.js"></script>
+  <script src="bulmacalar.js"></script>
+</body>
+</html>

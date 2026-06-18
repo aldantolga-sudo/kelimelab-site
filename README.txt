@@ -61,3 +61,60 @@ TEST
 2. Alt menüde E-posta bağlantısına tıklayın.
 3. iletisim.html sayfasında kelimelabiletisim@gmail.com göründüğünü kontrol edin.
 4. gizlilik-politikasi.html sayfasında aynı adresin yer aldığını kontrol edin.
+
+
+KELİMELAB v2.0 — BULMACA VE KELİME BİLGİSİ PAKETİ
+
+YENİ SAYFALAR
+- bulmacalar.html
+- gunun-kelimesi.html
+- gunluk-anagram.html
+- harf-cemberi.html
+- bulmaca-arsivi.html
+
+YENİ ÖZELLİKLER
+- Türkiye saatine göre her gün yenilenen 3 bulmaca
+- Günün Kelimesi: 6 tahmin, renkli harf ipuçları, Türkçe sanal klavye
+- Günlük Anagram: anlam ve kategori ipuçları, 5 deneme
+- Harf Çemberi: merkez harf, puanlama, seviye, cevap listesi
+- Oyun sonunda kelime anlamı, örnek cümle ve ek bilgi
+- Tarayıcıda saklanan seri, başarı oranı ve günlük ilerleme
+- Sonuç paylaşımı
+- Son 30 gün bulmaca arşivi
+- Ana sayfada bulmaca alanı
+- Gizlilik Politikasında yerel depolama açıklaması
+- Sitemap'e 5 yeni sayfa
+
+KELİME BİLGİSİ HAVUZU
+- 57 özenle hazırlanmış 5 harfli kelime kaydı
+- Her kayıtta kategori, kısa açıklama, örnek cümle ve ek bilgi
+
+TEST LİSTESİ
+1. bulmacalar.html sayfasını aç.
+2. Günün Kelimesi'nde fiziksel ve sanal klavyeyi dene.
+3. Geçerli olmayan kelimenin reddedildiğini kontrol et.
+4. Günlük Anagram'da ipucu, karıştır ve tahmin işlevlerini dene.
+5. Harf Çemberi'nde merkez harf kuralını, puanı ve bulunan kelime listesini dene.
+6. Sayfayı yenileyince ilerlemenin korunduğunu kontrol et.
+7. bulmaca-arsivi.html sayfasında geçmiş tarih bağlantılarını aç.
+8. Ana sayfada yeni bulmaca kartlarını kontrol et.
+9. Mobil menü ve oyun alanlarının taşmadığını kontrol et.
+
+ÖNEMLİ
+- Mevcut Google doğrulama HTML dosyasını GitHub'dan silme.
+- Önce bilgisayarda test et, sonra bu klasördeki bütün dosyaları GitHub'a yükle.
+
+
+v2.1 ANAGRAM KULLANICI DENEYİMİ DÜZELTMESİ
+- Günlük Anagram'ın her gün tek hedef kelime sunduğu açıklandı.
+- Bulmaca tamamlandığında cevap alanının neden kilitlendiği görünür hâle getirildi.
+- "Başka anagram çöz" bağlantısı eklendi.
+- "Arşivden başka gün seç" bağlantısı eklendi.
+
+
+v2.2 ANAGRAM TAMAMLAMA PENCERESİ
+- Günlük Anagram bittiğinde ekranın ortasında küçük sonuç penceresi açılır.
+- Kazanma veya kaybetme sonucu açıkça gösterilir.
+- Deneme ve kullanılan ipucu sayısı gösterilir.
+- Sonucu paylaş ve Başka anagram çöz seçenekleri pencerede bulunur.
+- Pencere X, Kapat veya arka alana dokunarak kapatılabilir.

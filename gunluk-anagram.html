@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Günlük Anagram Bulmacası | KelimeLab</title>
+  <meta name="description" content="Her gün karıştırılan beş harfli Türkçe kelimeyi anlam ipucuyla çöz; ipuçlarını kullan, serini takip et ve kelime bilgisini oku.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://kelimelab-site.pages.dev/gunluk-anagram.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="KelimeLab">
+  <meta property="og:title" content="Günlük Anagram Bulmacası | KelimeLab">
+  <meta property="og:description" content="Her gün karıştırılan beş harfli Türkçe kelimeyi anlam ipucuyla çöz; ipuçlarını kullan, serini takip et ve kelime bilgisini oku.">
+  <meta property="og:url" content="https://kelimelab-site.pages.dev/gunluk-anagram.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Game","name":"KelimeLab Günlük Anagram","url":"https://kelimelab-site.pages.dev/gunluk-anagram.html","inLanguage":"tr","numberOfPlayers":"1","description":"Her gün yenilenen Türkçe anagram bulmacası."}</script>
+</head>
+<body data-puzzle-page="anagram">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="KelimeLab ana sayfa">
+        <span class="brand-mark">K</span>
+        <span>KelimeLab</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menü</button>
+      <nav id="main-nav" class="site-nav" aria-label="Ana menü">
+        <a href="index.html">Ana Sayfa</a>
+          <a href="kelime-bulucu.html">Kelime Bulucu</a>
+          <a href="anagram-cozucu.html">Anagram</a>
+          <a href="bulmacalar.html" aria-current="page">Bulmacalar</a>
+          <a href="index.html#tum-araclar">Tüm Araçlar</a>
+          <a href="sik-sorulan-sorular.html">SSS</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero compact-puzzle-hero">
+      <div class="container narrow">
+        <p class="eyebrow">HER GÜN YENİ ANAGRAM</p>
+        <h1>Günlük Anagram</h1>
+        <p class="hero-copy">Karışık harfleri anlam ipucuyla doğru sıraya getir.</p>
+        <div class="puzzle-date-row">
+          <span data-puzzle-date></span>
+          <span class="archive-badge" data-archive-badge hidden>Arşiv bulmacası</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container puzzle-layout">
+      <section class="game-panel">
+        <section class="puzzle-stats" aria-label="Oyun istatistikleri">
+          <div><strong id="anagramPlayed">0</strong><span>Oynanan</span></div>
+          <div><strong id="anagramWinRate">0%</strong><span>Başarı</span></div>
+          <div><strong id="anagramStreak">0</strong><span>Seri</span></div>
+          <div><strong id="anagramMaxStreak">0</strong><span>En iyi seri</span></div>
+        </section>
+        <div class="anagram-tiles" id="anagramTiles" aria-label="Karışık harfler"></div>
+        <div class="anagram-hint-box">
+          <span>Kategori</span>
+          <strong id="anagramCategory">—</strong>
+          <p id="anagramHintText">İlk ipucun hazır.</p>
+        </div>
+
+        <form id="anagramForm" class="anagram-form" novalidate>
+          <label for="anagramInput">Cevabın</label>
+          <input id="anagramInput" type="text" maxlength="5" autocomplete="off" spellcheck="false" placeholder="5 harfli kelime">
+          <button class="primary-button" type="submit">Cevabı dene</button>
+        </form>
+
+        <div class="game-message" id="anagramMessage" aria-live="polite">
+          Beş deneme hakkın var.
+        </div>
+        <div class="attempt-dots" id="anagramAttempts" aria-label="Kalan denemeler"></div>
+
+        <div class="puzzle-actions">
+          <button class="secondary-button" id="anagramHintButton" type="button">İpucu al</button>
+          <button class="secondary-button" id="anagramShuffleButton" type="button">Harfleri karıştır</button>
+          <button class="primary-button" id="anagramShareButton" type="button" hidden>Sonucu paylaş</button>
+        </div>
+
+        <section class="completion-card" id="anagramCompletionCard" hidden>
+          <p class="eyebrow">BUGÜNKÜ BULMACA TAMAMLANDI</p>
+          <h2>Her gün tek hedef kelime</h2>
+          <p>
+            Günlük Anagram, her gün bir hedef kelime sunar. Hedefi bulduğunda
+            cevap alanı kapanır ve günlük sonucun kaydedilir.
+          </p>
+          <div class="completion-actions">
+            <a class="primary-link" href="anagram-cozucu.html">Başka anagram çöz</a>
+            <a class="secondary-link" href="bulmaca-arsivi.html">Arşivden başka gün seç</a>
+          </div>
+        </section>
+      </section>
+
+      <aside class="puzzle-side">
+        <section class="countdown-card">
+          <span>Yeni bulmacaya</span>
+          <strong data-countdown>--:--:--</strong>
+        </section>
+        <section class="legend-card">
+          <h2>Çözüm önerisi</h2>
+          <p>Önce sesli harfleri ayır, sonra yaygın başlangıç ve bitişleri dene.</p>
+          <p>İpucu düğmesi kategori, ilk harf ve anlam bilgisini sırayla açar.</p>
+        </section>
+      </aside>
+    </div>
+
+    <div class="container">
+      <section class="word-info-card" id="anagramInfoCard" hidden>
+        <p class="eyebrow">BUGÜNÜN ÇÖZÜMÜ</p>
+        <h2 id="anagramInfoTitle"></h2>
+        <span class="info-category" id="anagramInfoCategory"></span>
+        <p class="info-meaning" id="anagramInfoMeaning"></p>
+        <blockquote id="anagramInfoExample"></blockquote>
+        <p id="anagramInfoNote"></p>
+        <div id="otherAnagrams" class="other-anagrams" hidden></div>
+      </section>
+
+      <section class="prose-card">
+        <h2>Günlük Anagram nasıl oynanır?</h2>
+        <p>
+          Ekrandaki beş harfin tamamını birer kez kullanarak ipucuna uyan kelimeyi bul.
+          Yalnızca aynı harflerden oluşan tahminler kabul edilir.
+        </p>
+        <p>
+          Geçerli fakat hedef kelimeden farklı bir anagram yazarsan sistem bunu bildirir;
+          anlam ipucuna uyan hedefi bulman gerekir.
+        </p>
+      </section>
+    </div>
+  </main>
+  <dialog class="completion-dialog" id="anagramCompletionDialog" aria-labelledby="anagramCompletionTitle">
+    <div class="completion-dialog-inner">
+      <button class="completion-dialog-close" id="anagramCompletionClose" type="button" aria-label="Pencereyi kapat">×</button>
+
+      <div class="completion-dialog-icon" id="anagramCompletionIcon">✓</div>
+      <p class="eyebrow" id="anagramCompletionEyebrow">BUGÜNKÜ BULMACA TAMAMLANDI</p>
+      <h2 id="anagramCompletionTitle">Tebrikler!</h2>
+      <p class="completion-dialog-text" id="anagramCompletionText"></p>
+
+      <div class="completion-dialog-stats">
+        <div>
+          <span>Deneme</span>
+          <strong id="anagramCompletionAttempts">0/5</strong>
+        </div>
+        <div>
+          <span>İpucu</span>
+          <strong id="anagramCompletionHints">0</strong>
+        </div>
+      </div>
+
+      <div class="completion-dialog-actions">
+        <button class="primary-button" id="anagramModalShareButton" type="button">Sonucu paylaş</button>
+        <a class="secondary-link" href="anagram-cozucu.html">Başka anagram çöz</a>
+      </div>
+
+      <button class="completion-dialog-dismiss" id="anagramCompletionDismiss" type="button">Kapat</button>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-brand" href="index.html">KelimeLab</a>
+        <p>Türkçe kelime araçları, günlük bulmacalar ve açıklayıcı kelime içerikleri.</p>
+      </div>
+      <div>
+        <h2>Araçlar</h2>
+        <a href="kelime-bulucu.html">Kelime Bulucu</a>
+        <a href="anagram-cozucu.html">Anagram Çözücü</a>
+        <a href="jokerli-kelime-bulucu.html">Jokerli Bulucu</a>
+        <a href="kelime-kalibi-cozucu.html">Kalıp Çözücü</a>
+      </div>
+      <div>
+        <h2>Bulmacalar</h2>
+        <a href="gunun-kelimesi.html">Günün Kelimesi</a>
+        <a href="gunluk-anagram.html">Günlük Anagram</a>
+        <a href="harf-cemberi.html">Harf Çemberi</a>
+        <a href="bulmaca-arsivi.html">Bulmaca Arşivi</a>
+      </div>
+      <div>
+        <h2>Kurumsal</h2>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+        <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="mailto:kelimelabiletisim@gmail.com">E-posta</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-current-year></span> KelimeLab</span>
+      <span>Geliştirme sözlüğü: <strong data-word-count>8,778</strong> kelime</span>
+    </div>
+  </footer>
+  <script src="kelimeler.js"></script>
+  <script src="site.js"></script>
+  <script src="bulmaca-data.js"></script>
+  <script src="bulmacalar.js"></script>
+</body>
+</html>

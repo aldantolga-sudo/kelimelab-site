@@ -13,3 +13,9 @@ KELİMELAB v1.0 NOTU
 Bu paket, mevcut temizlenmiş geliştirme sözlüğünü kullanır.
 Araç sonuçları resmî sözlük veya belirli bir oyunun kabul listesi değildir.
 
+
+
+KELİMELAB v2.0 BULMACA NOTU
+Günlük kelime açıklamaları KelimeLab için özgün ve kısa bilgi metinleri olarak hazırlanmıştır.
+Bunlar resmî sözlük maddesi yerine kullanıcıya anlaşılır bağlam sunmayı amaçlar.
+Bulmaca ilerlemesi ve istatistikleri mevcut sürümde yalnızca tarayıcı yerel depolamasında tutulur.
